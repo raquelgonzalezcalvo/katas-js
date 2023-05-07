@@ -14,7 +14,7 @@ insertar([1,4,7,8]  // [1, 4, 0, 7, 8, 0]
 - Diagrama de flujo:
 1. Crear un array de numeros enteros.
 2. Recorrer el array y si es un numero par, hacer un push del numero 0.
-3. Condicional dentro de esta funcion que si es NULL la lista, devuelva el array vacío.
+3. Si es impar el numero hacer push también, pero sin un detras.
 */
 
 const originalArray = [1, 4, 7, 8];
