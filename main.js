@@ -10,6 +10,17 @@ insertar([2,4,5,7]  // [2,0,4,0,5,7]
 
 insertar([1,4,7,8]  // [1, 4, 0, 7, 8, 0]
 
+Solucion: 
+
+  function insertar(lista){
+    let resultado = [];
+    lista.forEach(function(item){
+        this.push(item); 
+        if(item % 2 ==0) 
+            this.push(0);
+        }, resultado)
+  return resultado
+  }
 
 - Diagrama de flujo:
 1. Crear un array de numeros enteros.
@@ -24,11 +35,9 @@ const getNewArray = (originalArray) => {
   // bucle for
   for (let i = 0; i < originalArray.length; i++) {
     const pepino = originalArray[i];
+    finalArray.push(pepino);
     if (originalArray[i] % 2 === 0) {
-      finalArray.push(pepino);
       finalArray.push(0);
-    } else {
-      finalArray.push(pepino);
     }
   }
 
