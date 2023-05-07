@@ -1,5 +1,6 @@
 /*
-Diseña una función que reciba como argumento una lista de números enteros. El script devolcerá una lista con los mismos valores pero insertando un 0 después de cada número par de la lista
+https://javascript.espaciolatino.com/retos/insertar_pares.html
+Diseña una función que reciba como argumento una lista de números enteros. El script devolverá una lista con los mismos valores pero insertando un 0 después de cada número par de la lista
 
 Si la lista está vacía devolverá un array vacío. No debe modificar la lista array original.
 
@@ -16,16 +17,23 @@ insertar([1,4,7,8]  // [1, 4, 0, 7, 8, 0]
 3. Condicional dentro de esta funcion que si es NULL la lista, devuelva el array vacío.
 */
 
-const originalArray = [2, 4, 5, 7];
+const originalArray = [1, 4, 7, 8];
 const finalArray = [];
 
 const getNewArray = (originalArray) => {
   // bucle for
   for (let i = 0; i < originalArray.length; i++) {
     const pepino = originalArray[i];
-    finalArray.push(pepino);
+    if (originalArray[i] % 2 === 0) {
+      finalArray.push(pepino);
+      finalArray.push(0);
+    } else {
+      finalArray.push(pepino);
+    }
   }
-  console.log(finalArray);
+
+  return finalArray;
 };
 
-getNewArray(originalArray);
+// getNewArray(originalArray);
+console.log(getNewArray(originalArray));
